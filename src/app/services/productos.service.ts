@@ -18,9 +18,10 @@ export class ProductosService {
         .subscribe( res => {
           
           console.log(res.json());
+
           this.cargando = false;
-          this.productos = res.json();
-        })
+          this.productos = res.json();  
+        });
   }
 
 }

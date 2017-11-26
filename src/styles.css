@@ -20,3 +20,10 @@
     animation-name: fadeIn;
   }
   
+/*
+  Color del Loading (SVG loading)
+*/
+svg path,
+svg rect{
+  fill: black;
+}
