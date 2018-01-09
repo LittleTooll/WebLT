@@ -27,3 +27,8 @@ svg path,
 svg rect{
   fill: black;
 }
+
+/* Color del texto de la portada del producto */
+.portfolio-portada {
+  color:snow;
+}
