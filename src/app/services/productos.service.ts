@@ -13,9 +13,6 @@ export class ProductosService {
   }
 
   public buscar_producto (termino:string){
-    //console.log("Buscando producto");
-    //console.log(this.productos.length);
-
     if (this.productos.length === 0){
       this.cargar_productos().then(()=> {
         // terminó la carga
@@ -52,8 +49,6 @@ export class ProductosService {
         this.http.get ('https://paginaweb-d3ce1.firebaseio.com/productos_idx.json')
         .subscribe( res => {
           
-          console.log(res.json());
-
           this.cargando = false;
           this.productos = res.json();  
           resolve();
