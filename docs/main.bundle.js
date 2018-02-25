@@ -405,7 +405,7 @@ LoadingComponent = __decorate([
 /***/ "../../../../../src/app/components/portafolio/portafolio.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <section class=\"ae-container-fluid ae-container-fluid--inner rk-portfolio animated fadeIn\">\n    \n  <div *ngIf=\"_ps.cargando\">\n    <app-loading></app-loading>\n  </div>\n\n    <div *ngIf=\"_ps.productos.length > 0 && !_ps.cargando\" \n      class=\"ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn\"> \n      \n      <a *ngFor=\"let producto of _ps.productos\" \n          [routerLink]=\"['/producto', producto.cod]\" \n          class=\"rk-item ae-masonry__item animated fadeIn\">\n        <img src=\"assets/productos/{{ producto.url }}.jpg\" alt=\"\">\n        <div class=\"item-meta\">\n          <h2>{{ producto.titulo }}</h2>\n          <p>{{ producto.categoria }}</p>\n        </div>\n      </a>\n    </div>\n  </section>\n"
+module.exports = "  <section class=\"ae-container-fluid ae-container-fluid--inner rk-portfolio animated fadeIn\">\n    \n  <div *ngIf=\"_ps.cargando\">\n    <app-loading></app-loading>\n  </div>\n\n    <div *ngIf=\"_ps.productos.length > 0 && !_ps.cargando\" \n      class=\"ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn\"> \n      \n      <a *ngFor=\"let producto of _ps.productos\" \n          [routerLink]=\"['/producto', producto.cod]\" \n          class=\"rk-item ae-masonry__item animated fadeIn\">\n        <img src=\"../../../assets/productos/{{ producto.url }}.jpg\" alt=\"\">\n        <div class=\"item-meta\">\n          <h2>{{ producto.titulo }}</h2>\n          <p>{{ producto.categoria }}</p>\n        </div>\n      </a>\n    </div>\n  </section>\n"
 
 /***/ }),
 
