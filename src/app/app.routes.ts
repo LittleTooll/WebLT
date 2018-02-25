@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule, APP_BASE_HREF } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 import { 
     AboutComponent, 
@@ -24,8 +24,7 @@ const routes: Routes = [
     CommonModule, RouterModule.forRoot(routes) 
   ],
   exports: [ RouterModule ],
-  declarations: [],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }]
+  declarations: []
 })
 
 export class AppRoutingModule { }
