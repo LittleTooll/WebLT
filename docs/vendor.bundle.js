@@ -5801,11 +5801,11 @@ module.exports = g;
 /* unused harmony export VERSION */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return PlatformLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return LOCATION_INITIALIZED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return LocationStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return APP_BASE_HREF; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return LocationStrategy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return APP_BASE_HREF; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return HashLocationStrategy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return PathLocationStrategy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return Location; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return Location; });
 /* unused harmony export ɵa */
 /* unused harmony export ɵb */
 
@@ -64870,7 +64870,7 @@ RouterLinkWithHref.decorators = [
 RouterLinkWithHref.ctorParameters = function () { return [
     { type: Router, },
     { type: ActivatedRoute, },
-    { type: __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* LocationStrategy */], },
+    { type: __WEBPACK_IMPORTED_MODULE_1__angular_common__["g" /* LocationStrategy */], },
 ]; };
 RouterLinkWithHref.propDecorators = {
     'target': [{ type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["_3" /* HostBinding */], args: ['attr.target',] }, { type: __WEBPACK_IMPORTED_MODULE_2__angular_core__["O" /* Input */] },],
@@ -65605,13 +65605,13 @@ var ROUTER_CONFIGURATION = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["g" /
  */
 var ROUTER_FORROOT_GUARD = new __WEBPACK_IMPORTED_MODULE_2__angular_core__["g" /* InjectionToken */]('ROUTER_FORROOT_GUARD');
 var ROUTER_PROVIDERS = [
-    __WEBPACK_IMPORTED_MODULE_1__angular_common__["g" /* Location */],
+    __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* Location */],
     { provide: UrlSerializer, useClass: DefaultUrlSerializer },
     {
         provide: Router,
         useFactory: setupRouter,
         deps: [
-            __WEBPACK_IMPORTED_MODULE_2__angular_core__["l" /* ApplicationRef */], UrlSerializer, ChildrenOutletContexts, __WEBPACK_IMPORTED_MODULE_1__angular_common__["g" /* Location */], __WEBPACK_IMPORTED_MODULE_2__angular_core__["j" /* Injector */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_core__["l" /* ApplicationRef */], UrlSerializer, ChildrenOutletContexts, __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* Location */], __WEBPACK_IMPORTED_MODULE_2__angular_core__["j" /* Injector */],
             __WEBPACK_IMPORTED_MODULE_2__angular_core__["_6" /* NgModuleFactoryLoader */], __WEBPACK_IMPORTED_MODULE_2__angular_core__["_7" /* Compiler */], ROUTES, ROUTER_CONFIGURATION,
             [UrlHandlingStrategy, new __WEBPACK_IMPORTED_MODULE_2__angular_core__["o" /* Optional */]()], [RouteReuseStrategy, new __WEBPACK_IMPORTED_MODULE_2__angular_core__["o" /* Optional */]()]
         ]
@@ -65715,10 +65715,10 @@ var RouterModule = (function () {
                 },
                 { provide: ROUTER_CONFIGURATION, useValue: config ? config : {} },
                 {
-                    provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* LocationStrategy */],
+                    provide: __WEBPACK_IMPORTED_MODULE_1__angular_common__["g" /* LocationStrategy */],
                     useFactory: provideLocationStrategy,
                     deps: [
-                        __WEBPACK_IMPORTED_MODULE_1__angular_common__["c" /* PlatformLocation */], [new __WEBPACK_IMPORTED_MODULE_2__angular_core__["f" /* Inject */](__WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* APP_BASE_HREF */]), new __WEBPACK_IMPORTED_MODULE_2__angular_core__["o" /* Optional */]()], ROUTER_CONFIGURATION
+                        __WEBPACK_IMPORTED_MODULE_1__angular_common__["c" /* PlatformLocation */], [new __WEBPACK_IMPORTED_MODULE_2__angular_core__["f" /* Inject */](__WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* APP_BASE_HREF */]), new __WEBPACK_IMPORTED_MODULE_2__angular_core__["o" /* Optional */]()], ROUTER_CONFIGURATION
                     ]
                 },
                 {

@@ -140,7 +140,7 @@ AppModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_3__app_routes__["a" /* app_routing */],
+            __WEBPACK_IMPORTED_MODULE_3__app_routes__["a" /* AppRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* HttpModule */]
         ],
         providers: [
@@ -160,18 +160,44 @@ AppModule = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__ = __webpack_require__("../../../../../src/app/components/index.paginas.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return app_routing; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__ = __webpack_require__("../../../../../src/app/components/index.paginas.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
 
-var app_routes = [
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__["a" /* PortafolioComponent */] },
-    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__["b" /* AboutComponent */] },
-    { path: 'producto/:id', component: __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__["c" /* PortfolioitemComponent */] },
-    { path: 'buscar/:termino', component: __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__["d" /* SearchComponent */] },
-    { path: '**', pathMatch: 'full', redirectTo: 'home' },
+
+
+var routes = [
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["a" /* PortafolioComponent */] },
+    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["b" /* AboutComponent */] },
+    { path: 'producto/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["c" /* PortfolioitemComponent */] },
+    { path: 'buscar/:termino', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["d" /* SearchComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["a" /* PortafolioComponent */] },
 ];
-var app_routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(app_routes, { useHash: true });
+var AppRoutingModule = (function () {
+    function AppRoutingModule() {
+    }
+    return AppRoutingModule;
+}());
+AppRoutingModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_2__angular_common__["e" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(routes)
+        ],
+        exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */]],
+        declarations: [],
+        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* APP_BASE_HREF */], useValue: '/' }]
+    })
+], AppRoutingModule);
+
 //# sourceMappingURL=app.routes.js.map
 
 /***/ }),
@@ -223,7 +249,7 @@ var _a;
 /***/ "../../../../../src/app/components/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"ae-container-fluid rk-footer \">\n  <div class=\"ae-grid ae-grid--collapse\">\n    <div class=\"ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left\">\n      <ul class=\"rk-menu rk-footer-menu\">\n        <li class=\"rk-menu__item\"><a routerLink=\"about\" class=\"rk-menu__link\">About us</a>\n        </li>\n      </ul>\n      <p class=\"rk-footer__text rk-footer__copy \"> <span class=\"ae-u-bold\">© </span><span class=\"ae-u-bolder\">{{ anio }} {{ _is.info.titulo }} </span>All Right Reserved.</p>\n    </div>\n    <div class=\"ae-grid__item item-lg-4 au-xs-ta-center\">\n        <a [href]=\"_is.info.facebook\" target=\"_blank\" class=\"rk-social-btn \">\n            <svg>\n              <use xlink:href=\"assets/img/symbols.svg#icon-facebook\"></use>\n            </svg>\n          </a>    \n      <a [href]=\"_is.info.twitter\" target=\"_blank\" class=\"rk-social-btn \">\n        <svg>\n          <use xlink:href=\"assets/img/symbols.svg#icon-twitter\"></use>\n        </svg>\n      </a>\n    </div>\n    <div class=\"ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right\">\n      <p class=\"rk-footer__text rk-footer__contact \"> <span class=\"ae-u-bold\">Email: </span><span class=\"ae-u-bolder\"> \n        <a href=\"mailTo:{{ _is.info.email }}\" class=\"rk-dark-color \">{{ _is.info.email }}</a></span></p>\n      <p class=\"rk-footer__text rk-footer__by\">Create by <a routerLink=\"about\" class=\"ae-u-bolder\">{{ _is.info.nombre_corto }}</a></p>\n    </div>\n  </div>\n</footer>\n"
+module.exports = "<footer class=\"ae-container-fluid rk-footer \">\n  <div class=\"ae-grid ae-grid--collapse\">\n    <div class=\"ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left\">\n      <ul class=\"rk-menu rk-footer-menu\">\n        <li class=\"rk-menu__item\"><a routerLink=\"about\" class=\"rk-menu__link\">About us</a>\n        </li>\n      </ul>\n      <p class=\"rk-footer__text rk-footer__copy \"> <span class=\"ae-u-bold\">© </span><span class=\"ae-u-bolder\">{{ anio }} {{ _is.info.titulo }} </span>All Right Reserved.</p>\n    </div>\n    <div class=\"ae-grid__item item-lg-4 au-xs-ta-center\">\n        <a [href]=\"_is.info.facebook\" target=\"_blank\" class=\"rk-social-btn \">\n            <svg>\n              <use xlink:href=\"assets/img/symbols.svg#icon-facebook\"></use>\n            </svg>\n          </a>    \n      <a [href]=\"_is.info.twitter\" target=\"_blank\" class=\"rk-social-btn \">\n        <svg>\n          <use xlink:href=\"assets/img/symbols.svg#icon-twitter\"></use>\n        </svg>\n      </a>\n      <a [href]=\"_is.info.instagram\" target=\"_blank\" class=\"rk-social-btn \">\n          <svg>\n            <use xlink:href=\"assets/img/symbols.svg#icon-instagram\"></use>\n          </svg>\n        </a>\n      </div>\n    <div class=\"ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right\">\n      <p class=\"rk-footer__text rk-footer__contact \"> <span class=\"ae-u-bold\">Email: </span><span class=\"ae-u-bolder\"> \n        <a href=\"mailTo:{{ _is.info.email }}\" class=\"rk-dark-color \">{{ _is.info.email }}</a></span></p>\n      <p class=\"rk-footer__text rk-footer__by\">Create by <a routerLink=\"about\" class=\"ae-u-bolder\">{{ _is.info.nombre_corto }}</a></p>\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
@@ -423,7 +449,7 @@ var _a;
 /***/ "../../../../../src/app/components/portfolioitem/portfolioitem.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "  <div *ngIf=\"producto\">\n  \n  <header \n    [ngStyle]=\"{ 'background-image':'url(assets/productos/'+ cod +'/main.jpg)'}\"\n    class=\"rk-portfolio-cover\">\n    <div class=\"item-inside__meta\">\n      <h1 class=\"ae-u-bolder rk-portfolio-title portfolio-portada\">{{producto.producto}}</h1>\n      <p class=\"ae-theta rk-portfolio-category portfolio-portada\">{{producto.categoria}}</p>\n    </div>\n  </header>\n  <div class=\"ae-container-fluid\">\n    <div class=\"ae-grid ae-grid--collapse rk-portfolio-info \">\n      <div class=\"ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left\">\n        <h2 class=\"rk-portfolio-inner-title \">{{producto.producto}}</h2>\n      </div>\n    </div>\n  </div>\n  <div class=\"ae-container-fluid ae-container-fluid--inner rk-portfolio--inner\">\n    <div class=\"ae-grid ae-grid--collapse au-xs-ptp-1\">\n      <div class=\"ae-grid__item item-lg-5 au-lg-ptp-1\">\n        <h4 class=\"ae-u-bolder\">{{producto.subtitulo1}}</h4>\n        <p class=\"ae-eta\">{{producto.desc1}}</p>\n      </div>\n      <div class=\"ae-grid__item item-lg-6 item-lg--offset-1\">\n        <img src=\"assets/productos/{{ cod }}/pic-1.jpg\" alt=\"Urku Portfolio\">\n      </div>\n    </div>\n    <div class=\"ae-grid ae-grid--collapse\">\n      <div class=\"ae-grid__item item-lg-8\"><img src=\"assets/productos/{{ cod }}/pic-2.jpg\" alt=\"Urku Portfolio\"></div>\n      <div class=\"ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1\">\n        <p>{{producto.desc2}}</p>\n        <p class=\"ae-u-bolder\">{{producto.subtitulo2}}</p>\n      </div>\n    </div>\n\n</div>  "
+module.exports = "  <div *ngIf=\"producto\">\n  \n  <header \n    [ngStyle]=\"{ 'background-image':'url(../../../assets/productos/'+ cod +'/main.jpg)'}\"\n    class=\"rk-portfolio-cover\">\n    <div class=\"item-inside__meta\">\n      <h1 class=\"ae-u-bolder rk-portfolio-title portfolio-portada\">{{producto.producto}}</h1>\n      <p class=\"ae-theta rk-portfolio-category portfolio-portada\">{{producto.categoria}}</p>\n    </div>\n  </header>\n  <div class=\"ae-container-fluid\">\n    <div class=\"ae-grid ae-grid--collapse rk-portfolio-info \">\n      <div class=\"ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left\">\n        <h2 class=\"rk-portfolio-inner-title \">{{producto.producto}}</h2>\n      </div>\n    </div>\n  </div>\n  <div class=\"ae-container-fluid ae-container-fluid--inner rk-portfolio--inner\">\n    <div class=\"ae-grid ae-grid--collapse au-xs-ptp-1\">\n      <div class=\"ae-grid__item item-lg-5 au-lg-ptp-1\">\n        <h4 class=\"ae-u-bolder\">{{producto.subtitulo1}}</h4>\n        <p class=\"ae-eta\">{{producto.desc1}}</p>\n      </div>\n      <div class=\"ae-grid__item item-lg-6 item-lg--offset-1\">\n        <img src=\"../../../assets/productos/{{ cod }}/pic-1.jpg\">\n      </div>\n    </div>\n    <div class=\"ae-grid ae-grid--collapse\">\n      <div class=\"ae-grid__item item-lg-8\"><img src=\"../../../assets/productos/{{ cod }}/pic-2.jpg\"></div>\n      <div class=\"ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1\">\n        <p>{{producto.desc2}}</p>\n        <p class=\"ae-u-bolder\">{{producto.subtitulo2}}</p>\n      </div>\n    </div>\n\n</div>  "
 
 /***/ }),
 
