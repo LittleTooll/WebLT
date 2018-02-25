@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from "@angular/http";
 
 // Rutas
-import { AppRoutingModule } from './app.routes';
+import { app_routing } from "./app.routes";
 
 // Servicios
 import { InformacionService } from "./services/informacion.service";
@@ -32,7 +32,7 @@ import { SearchComponent } from './components/search/search.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    app_routing,
     HttpModule
   ],
   providers: [

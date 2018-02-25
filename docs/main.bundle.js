@@ -140,7 +140,7 @@ AppModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_3__app_routes__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_3__app_routes__["a" /* app_routing */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* HttpModule */]
         ],
         providers: [
@@ -160,43 +160,18 @@ AppModule = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__ = __webpack_require__("../../../../../src/app/components/index.paginas.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__ = __webpack_require__("../../../../../src/app/components/index.paginas.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return app_routing; });
 
 
-
-
-var routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["a" /* PortafolioComponent */] },
-    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["b" /* AboutComponent */] },
-    { path: 'producto/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["c" /* PortfolioitemComponent */] },
-    { path: 'buscar/:termino', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["d" /* SearchComponent */] },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_3__components_index_paginas__["a" /* PortafolioComponent */] },
+var app_routes = [
+    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__["a" /* PortafolioComponent */] },
+    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__["b" /* AboutComponent */] },
+    { path: 'producto/:id', component: __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__["c" /* PortfolioitemComponent */] },
+    { path: 'buscar/:termino', component: __WEBPACK_IMPORTED_MODULE_1__components_index_paginas__["d" /* SearchComponent */] },
+    { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
-var AppRoutingModule = (function () {
-    function AppRoutingModule() {
-    }
-    return AppRoutingModule;
-}());
-AppRoutingModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_2__angular_common__["e" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(routes)
-        ],
-        exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */]],
-        declarations: []
-    })
-], AppRoutingModule);
-
+var app_routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(app_routes, { useHash: true });
 //# sourceMappingURL=app.routes.js.map
 
 /***/ }),
